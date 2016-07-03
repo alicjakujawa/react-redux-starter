@@ -1,1 +1,1 @@
-# foodme
+# react-redux-starter
