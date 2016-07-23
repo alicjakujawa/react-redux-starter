@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styles from './style.sass';
 
 export default class App extends Component {
   constructor(props) {
@@ -27,7 +28,7 @@ export default class App extends Component {
     const { counter } = this.state;
 
     return (
-      <header>
+      <header className="header">
         <div>Webpack is doing its thing with React and ES2015</div>
         <div>{counter}</div>
       </header>
