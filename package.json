@@ -25,6 +25,7 @@
     "babel-preset-react-hmre": "^1.1.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "node-sass": "^3.8.0",
+    "redux-devtools": "^3.3.1",
     "sass-loader": "^4.0.0",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
@@ -36,8 +37,10 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-runtime": "^6.9.2",
     "css-loader": "^0.23.1",
+    "immutable": "^3.8.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
+    "react-redux": "^4.4.5",
     "style-loader": "^0.13.1"
   }
 }
