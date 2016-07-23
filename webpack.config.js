@@ -1,4 +1,5 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var webpack           = require("webpack");
 
 module.exports = {
   entry: "./src/index.js",
@@ -25,6 +26,9 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin("public/style.css", {
       allChunks: true
+    }),
+    new webpack.DefinePlugin({
+      __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false'))
     })
   ]
 }
