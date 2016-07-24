@@ -5,16 +5,8 @@ import { connect } from 'react-redux';
 import * as CounterActions from '../actions/CounterActions';
 import Counter from '../components/Counter';
 
-@connect(state => ({
-  counter: state.counter
-}))
-export default class CounterContainer extends Component {
-
-  static propTypes = {
-    dispatch: PropTypes.func.isRequired
-  }
-
-  render () {
+class CounterContainer extends Component {
+  render() {
     const { counter: { counterValue }, dispatch } = this.props;
     const actions = bindActionCreators(CounterActions, dispatch);
     return (
@@ -25,3 +17,11 @@ export default class CounterContainer extends Component {
     );
   }
 }
+
+CounterContainer.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  counter: PropTypes.object.isRequired,
+};
+
+
+export default connect(state => ({ counter: state.counter }))(CounterContainer);

@@ -8,8 +8,14 @@ module.exports = {
     filename: "bundle.js",
     publicPath: "/static/"
   },
-
   module: {
+    preLoaders: [
+      {
+        test: /\.js$/,
+        loader: "eslint-loader",
+        exclude: /node_modules/
+      }
+    ],
     loaders: [
       {
         test: /\.js$/,
@@ -22,6 +28,9 @@ module.exports = {
         loader: ExtractTextPlugin.extract("css!sass")
       }
     ]
+  },
+  eslint: {
+    configFile: './.eslintrc'
   },
   plugins: [
     new ExtractTextPlugin("public/style.css", {

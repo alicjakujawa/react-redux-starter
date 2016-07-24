@@ -1,3 +1,3 @@
 export const COUNTER = {
-  INCREMENT: 'INCREMENT'
-}
+  INCREMENT: 'INCREMENT',
+};

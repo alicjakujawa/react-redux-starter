@@ -1,18 +1,18 @@
 import React, { Component, PropTypes } from 'react';
-import styles from './style.sass';
+import './style.sass';
 
-export default class Counter extends Component {
+class Counter extends Component {
 
   componentDidMount() {
     const { increment } = this.props.actions;
     this.interval = setInterval(
       () => increment(),
       1000
-    )
+    );
   }
 
   componentWillUnmount() {
-    clearInterval(this.interval)
+    clearInterval(this.interval);
   }
 
   render() {
@@ -28,7 +28,8 @@ export default class Counter extends Component {
 }
 
 Counter.propTypes = {
-  counterValue: PropTypes.number.isRequired
-}
+  counterValue: PropTypes.number.isRequired,
+  actions: PropTypes.func.isRequired,
+};
 
-export default Counter
+export default Counter;
